@@ -95,3 +95,15 @@
 \newcommand{\categorytext}[1]{\rule[-0.4cm]{0pt}{1cm}\parbox{\rightcolumnwidth}{\raggedright #1}}
 
 \newenvironment{items}{\begin{itemize}[leftmargin=5mm]}{\end{itemize}}
+
+\newenvironment{sectionbox}[1]{
+    \begin{tcolorbox}[title={\Large #1}]
+        \begin{center}
+            \begin{tabular}{p{\leftcolumnwidth}p{\rightcolumnwidth}}
+                \toprule
+}{
+                \bottomrule
+            \end{tabular}
+        \end{center}
+    \end{tcolorbox}
+}
