@@ -15,6 +15,7 @@
 \RequirePackage{tcolorbox}
 \RequirePackage{array}
 \RequirePackage{enumitem}
+\RequirePackage{environ}
 
 \usetikzlibrary{calc,math}
 
@@ -106,4 +107,24 @@
             \end{tabular}
         \end{center}
     \end{tcolorbox}
+}
+
+\newenvironment{categorybox}[1]{
+    \begin{tcolorbox}[title={\Large #1}]
+        \begin{center}
+}{
+        \end{center}
+    \end{tcolorbox}
+}
+
+\NewEnviron{category}[1]{
+    \begin{tabular}{>{\raggedleft}p{\leftcolumnwidth}>{\raggedright}p{\rightcolumnwidth}}
+        \textsc{\textbf{#1}} & \parbox{\rightcolumnwidth}{\BODY}
+    \end{tabular}
+}{}
+
+\newcommand{\categoryseparator}{
+    \vspace{5pt}
+    \hrule
+    \vspace{6pt}
 }
