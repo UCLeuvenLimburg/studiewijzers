@@ -92,26 +92,13 @@
 \newlength{\rightcolumnwidth}
 \setlength{\rightcolumnwidth}{11cm}
 
-\newcommand{\categorylabel}[1]{\rule[-0.4cm]{0pt}{1cm}\parbox{\leftcolumnwidth}{\raggedleft\bfseries #1}}
-\newcommand{\categorytext}[1]{\rule[-0.4cm]{0pt}{1cm}\parbox{\rightcolumnwidth}{\raggedright #1}}
+\newcommand{\categorylabel}[1]{\parbox{\leftcolumnwidth}{\raggedleft\bfseries #1}}
+\newcommand{\categorytext}[1]{\parbox{\rightcolumnwidth}{\raggedright #1}}
 
 \newenvironment{items}{\begin{itemize}[leftmargin=5mm]}{\end{itemize}}
 
-\newenvironment{sectionbox}[1]{
-    \begin{tcolorbox}[title={\Large #1}]
-        \begin{center}
-            \begin{tabular}{p{\leftcolumnwidth}p{\rightcolumnwidth}}
-                \toprule
-}{
-                \bottomrule
-            \end{tabular}
-        \end{center}
-    \end{tcolorbox}
-}
-
 \newcounter{categoryboxcounter}
 \newcounter{categorycounter}[categoryboxcounter]
-
 
 \newenvironment{categorybox}[1]{
     \stepcounter{categoryboxcounter}
@@ -125,7 +112,7 @@
 \NewEnviron{category}[1]{
     \stepcounter{categorycounter}
     \ifnum\value{categorycounter}>1\categoryseparator\fi
-    \begin{tabular}{>{\raggedleft}p{\leftcolumnwidth}>{\raggedright}p{\rightcolumnwidth}}
+    \begin{tabular}{>{\raggedleft}m{\leftcolumnwidth}>{\raggedright}m{\rightcolumnwidth}}
         \textsc{\textbf{#1}} & \parbox{\rightcolumnwidth}{\BODY}
     \end{tabular}
 }{}
