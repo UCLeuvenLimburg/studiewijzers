@@ -42,7 +42,7 @@
         ects-url={http://onderwijsaanbod.leuven.ucll.be/syllabi/n/MBI59AN.htm},
     },
     vgo/.style={
-        opo={Programmeren van \\ visuele gebruikersomgevingen},
+        opo={programmeren van \\ visuele gebruikersomgevingen},
         opo-code=MBI50X,
         ects-url={http://onderwijsaanbod.leuven.ucll.be/syllabi/n/MBI50XN.htm},
     },
