@@ -109,7 +109,12 @@
     \end{tcolorbox}
 }
 
+\newcounter{categoryboxcounter}
+\newcounter{categorycounter}[categoryboxcounter]
+
+
 \newenvironment{categorybox}[1]{
+    \stepcounter{categoryboxcounter}
     \begin{tcolorbox}[title={\Large #1}]
         \begin{center}
 }{
@@ -118,6 +123,8 @@
 }
 
 \NewEnviron{category}[1]{
+    \stepcounter{categorycounter}
+    \ifnum\value{categorycounter}>1\categoryseparator\fi
     \begin{tabular}{>{\raggedleft}p{\leftcolumnwidth}>{\raggedright}p{\rightcolumnwidth}}
         \textsc{\textbf{#1}} & \parbox{\rightcolumnwidth}{\BODY}
     \end{tabular}
