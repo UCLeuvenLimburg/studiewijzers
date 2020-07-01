@@ -12,6 +12,8 @@
 \RequirePackage{pxfonts}
 \RequirePackage{hyperref}
 \RequirePackage{booktabs}
+\RequirePackage{tcolorbox}
+\RequirePackage{array}
 
 \usetikzlibrary{calc,math}
 
@@ -63,27 +65,25 @@
 
 \newcommand{\showheader}{
     \noindent
-    \begin{tabular}{p{12cm}r}
-      \parbox[b]{12cm}{
-        {\large\textsc{studiewijzer \studiewijzer@academiejaar}} \\[2mm]
-        {\huge\textsc{\studiewijzer@opo}}{\hfill\small\textsc{(\studiewijzer@opocode)}} \\
-      } & \includegraphics[scale=0.5]{logo.png} \\
-      \bottomrule
-    \end{tabular}
+    \begin{center}
+        \begin{tabular}{p{12cm}r}
+        \parbox[b]{12cm}{
+            {\large\textsc{studiewijzer \studiewijzer@academiejaar}} \\[2mm]
+            {\huge\textsc{\studiewijzer@opo}}{\hfill\small\textsc{(\studiewijzer@opocode)}} \\
+        } & \includegraphics[scale=0.4]{logo.png} \\
+        \bottomrule
+        \end{tabular}
+    \end{center}
     \vskip1mm
-
     \noindent\small Deze studiewijzer is een toelichting bij de \href{\studiewijzer@ectsurl}{ECTS-fiche}. De ECTS-fiche en deze studiewijzer dienen samen gelezen te worden.
+    \vskip2mm
 }
 
 
 \newlength{\leftcolumnwidth}
 \setlength{\leftcolumnwidth}{4cm}
 \newlength{\rightcolumnwidth}
-\setlength{\rightcolumnwidth}{12cm}
+\setlength{\rightcolumnwidth}{11cm}
 
-\newcommand{\categorylabel}[1]{
-    \parbox{\leftcolumnwidth}{\raggedright #1}
-}
-\newcommand{\categorytext}[1]{
-    \parbox{\rightcolumnwidth}{\raggedright #1}
-}
+\newcommand{\categorylabel}[1]{\rule[-0.4cm]{0pt}{1cm}\parbox{\leftcolumnwidth}{\raggedleft\bfseries #1}}
+\newcommand{\categorytext}[1]{\rule[-0.4cm]{0pt}{1cm}\parbox{\rightcolumnwidth}{\raggedright #1}}
