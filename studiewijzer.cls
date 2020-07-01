@@ -14,6 +14,7 @@
 \RequirePackage{booktabs}
 \RequirePackage{tcolorbox}
 \RequirePackage{array}
+\RequirePackage{enumitem}
 
 \usetikzlibrary{calc,math}
 
@@ -92,3 +93,5 @@
 
 \newcommand{\categorylabel}[1]{\rule[-0.4cm]{0pt}{1cm}\parbox{\leftcolumnwidth}{\raggedleft\bfseries #1}}
 \newcommand{\categorytext}[1]{\rule[-0.4cm]{0pt}{1cm}\parbox{\rightcolumnwidth}{\raggedright #1}}
+
+\newenvironment{items}{\begin{itemize}[leftmargin=5mm]}{\end{itemize}}
