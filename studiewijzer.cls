@@ -44,6 +44,11 @@
         opo-code=MBI50X,
         ects-url={http://onderwijsaanbod.leuven.ucll.be/syllabi/n/MBI50XN.htm},
     },
+    3dcg/.style={
+        opo={3D Computer Graphics},
+        opo-code=MBI62A,
+        ects-url={http://onderwijsaanbod.leuven.ucll.be/syllabi/n/MBI62AN.htm},
+    },
 }
 
 \newcommand{\studiewijzer}[1]{\pgfkeys{/studiewijzer/.cd,#1}}
