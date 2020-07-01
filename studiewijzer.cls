@@ -16,6 +16,9 @@
 \RequirePackage{array}
 \RequirePackage{enumitem}
 \RequirePackage{environ}
+\RequirePackage{accanthis}
+\RequirePackage[T1]{fontenc}
+
 
 \usetikzlibrary{calc,math}
 
@@ -42,7 +45,7 @@
         ects-url={http://onderwijsaanbod.leuven.ucll.be/syllabi/n/MBI59AN.htm},
     },
     vgo/.style={
-        opo={programmeren van \\ visuele gebruikersomgevingen},
+        opo={Programmeren van \\ Visuele Gebruikersomgevingen},
         opo-code=MBI50X,
         ects-url={http://onderwijsaanbod.leuven.ucll.be/syllabi/n/MBI50XN.htm},
     },
@@ -72,16 +75,12 @@
 
 \newcommand{\showheader}{
     \noindent
-    \begin{center}
-        \begin{tabular}{p{12cm}r}
-        \parbox[b]{12cm}{
-            {\large\textsc{studiewijzer \studiewijzer@academiejaar}} \\[2mm]
-            {\huge\textsc{\studiewijzer@opo}}{\hfill\small\textsc{(\studiewijzer@opocode)}} \\
-        } & \includegraphics[scale=0.4]{logo.png} \\
-        \bottomrule
-        \end{tabular}
-    \end{center}
-    \vskip1mm
+    \parbox[b]{14cm}{
+        {\huge{\studiewijzer@opo}}{\hfill\small\textsc{(\studiewijzer@opocode)}} \\
+        {\large\textsc{studiewijzer \studiewijzer@academiejaar}}
+    } \hfill \includegraphics[scale=0.3]{logo.png} \\
+    \hrule height 1pt \relax
+    \vskip2mm
     \noindent\small Deze studiewijzer is een toelichting bij de \href{\studiewijzer@ectsurl}{ECTS-fiche}. De ECTS-fiche en deze studiewijzer dienen samen gelezen te worden.
     \vskip2mm
 }
