@@ -125,6 +125,6 @@
 
 \newcommand{\categoryseparator}{
     \vspace{5pt}
-    \hrule
+    \hrule height 1pt \relax
     \vspace{6pt}
 }
