@@ -54,6 +54,16 @@
         opo-code=MBI62A,
         ects-url={http://onderwijsaanbod.leuven.ucll.be/syllabi/n/MBI62AN.htm},
     },
+    algo/.style={
+        opo={Algoritmisch Denken},
+        opo-code=MBI04A,
+        ects-url={http://onderwijsaanbod.leuven.ucll.be/syllabi/n/MBI04AN.htm},
+    },
+    mobile/.style={
+        opo={Mobiele toepassingen},
+        opo-code=MBI20X,
+        ects-url={http://onderwijsaanbod.leuven.ucll.be/syllabi/n/MBI20XN.htm},
+    },
 }
 
 \newcommand{\studiewijzer}[1]{\pgfkeys{/studiewijzer/.cd,#1}}
