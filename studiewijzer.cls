@@ -64,6 +64,11 @@
         opo-code=MBI20X,
         ects-url={http://onderwijsaanbod.leuven.ucll.be/syllabi/n/MBI20XN.htm},
     },
+    pvm/.style={
+        opo={Programmeren voor Multimedia},
+        opo-code=MBI66A,
+        ects-url={http://onderwijsaanbod.leuven.ucll.be/syllabi/n/MBI66AN.htm},
+    },
 }
 
 \newcommand{\studiewijzer}[1]{\pgfkeys{/studiewijzer/.cd,#1}}
