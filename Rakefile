@@ -14,37 +14,3 @@ $ids.each do |id|
 end
 
 task :default => $ids
-
-
-# labs.each do |lab|
-
-# end
-
-# task :exercises => %i[
-#     clean
-#     animal-crossing
-#     arithmetic
-#     arrays
-#     arrays-2d
-#     booleans
-#     car
-#     conditionals
-#     exam-cities
-#     exam-crosswords
-#     exam-infection
-#     exam-multiple-choice
-#     exam-picross
-#     exam-solitaire
-#     imaging
-#     lambdas
-#     loops
-#     objects
-#     parsing
-#     patterns
-#     recursion
-#     sorting
-#     strings
-#     sudoku
-#     tetris
-#     yahtzee
-# ]
