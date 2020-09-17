@@ -69,6 +69,11 @@
         opo-code=MBI66A,
         ects-url={http://onderwijsaanbod.leuven.ucll.be/syllabi/n/MBI66AN.htm},
     },
+    apt/.style={
+        opo={Basisbeginselen .NET Programmeren},
+        opo-code=MBI34A,
+        ects-url={http://onderwijsaanbod.leuven.ucll.be/syllabi/n/MBI34AN.htm},
+    },
 }
 
 \newcommand{\studiewijzer}[1]{\pgfkeys{/studiewijzer/.cd,#1}}
